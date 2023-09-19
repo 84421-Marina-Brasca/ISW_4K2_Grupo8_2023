@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./notiflix-notify-aio-3.2.6.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./imagenes/logo.ico">
+    <title>Finalizar la compra</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+
+    <!-- Bootstrap core CSS 
+    <link href="js/bootstrap.min.js" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="pedido.css" />
+    
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('./fonts/static/Montserrat-Regular.ttf') format('ttf'), 
+                url('./fonts/static/Montserrat-Black.ttf') format('ttf'),
+        }
+    :root {
+            --bs-font-family-base: 'Montserrat', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container_img">
+        <img class="mb-3 d-block mx-auto img-fluid" src="./imagenes/delivereat.png">
+    </div>
+
+    <div class="container">
+        <div class="py-5 text-center">
+
+            <h2 class="principal">Finalizar la compra</h2>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    Tu Carrito
+                    <span class="badge badge-secondary badge-pill" id="cantidadProductos">3</span>
+                </h4>
+                <ul class="list-group mb-3" id="carrito-lista">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Aros de Cebolla</h6>
+                            <small class="text-muted">Aros de cebolla con aderezo de salsa barbacoa</small>
+                        </div>
+                        <span class="text-muted importe">$1200</span>
+                        <button class="btn btn-danger btn-xs eliminar">X</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">7Up Lima Limón</h6>
+                            <small class="text-muted">354 ml</small>
+                        </div>
+                        <span class="text-muted importe">$890</span>
+                        <button class="btn btn-danger btn-xs eliminar">X</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sandwich Vegano</h6>
+                            <small class="text-muted">Sandwich de milanesa plant based con sabor a carne</small>
+                        </div>
+                        <span class="text-muted importe">$3700</span>
+                        <button class="btn btn-danger btn-xs eliminar">X</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="text-success">
+                            <h6 class="my-0">Código de descuento</h6>
+                            <small>CODIGOEJEMPLO</small>
+                        </div>
+                        <small id="codigoDescuento">-$0</small>
+                        <!--- VER PORQUE NO TOMA EL CSS DE LOS BOTONES XS -->
+                    </li>
+                </ul>
+
+                <div class="total">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total</span>
+                        <span  id="total">$5790</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Vuelto</span>
+                        <span  id="vuelto">---</span>
+                    </li>
+                </div>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Código">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary">Añadir</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <div>
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        Mapa
+                    </h4>
+                    <div>
+                        <iframe class="mb-3 d-block mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.23899428132!2d-64.27661363023637!3d-31.3992803200505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1694722697724!5m2!1ses!2sar" width=400 height=350 style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Datos de Envio</h4>
+                <form class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+                        <label for="address">Calle</label>
+                        <input type="text" class="form-control" id="address" placeholder="Avenida Colón 2509" required>
+                        <div class="invalid-feedback" id="m-error-address">
+                            Porfavor seleccione la dirección de envío.
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country">Provincia</label>
+                            <select class="custom-select d-block w-100" id="country" required>
+                                <option value="">Seleccione...</option>
+                                <option>Córdoba</option>
+                            </select>
+                            <div class="invalid-feedback" id="m-error-country">
+                                Porfavor seleccione una provincia válida.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">Ciudad</label>
+                            <select class="custom-select d-block w-100" id="state" required>
+                                <option value="">Seleccione...</option>
+                                <option>Cosquin</option>
+                                <option>Mina Clavero</option>
+                                <option>Nono</option>
+                                <option>Santa Rosa de Calamuchita</option>
+                                <option>Villa Carlos Paz</option>
+                                <option>Villa General Belgrano</option>
+                            </select>
+                            <div class="invalid-feedback" id="m-error-state">
+                                Porfavor seleccione una localidad.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">CPA</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required min="1"
+                                maxlength="4">
+                            <div class="invalid-feedback" id="mensajeErrorZip">
+                                Ingrese un codigo postal.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="referencia">Referencia (opcional)</label>
+                            <textarea type="text" class="form-control" id="referencia" name="referencia" rows="4"
+                                cols="20" maxlength="200"></textarea>
+                            <div id="error-message" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="opcion" class="custom-control-input" id="same-address">
+                        <label class="custom-control-label" for="same-address">La dirección de envío es mi
+                            dirección</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="opcion" class="custom-control-input" id="save-info">
+                        <label class="custom-control-label" for="save-info">Guardar datos de envío</label>
+                    </div>
+                    <hr class="mb-4">
+
+                    <h4 class="mb-3">Método de Pago</h4>
+
+                    <div class="d-block my-3">
+
+                        <div class="custom-control custom-radio">
+                            <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="cash">Efectivo</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input">
+                            <label class="custom-control-label" for="credit">Tarjeta de Débito/Crédito</label>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div id="payWithDiv" class="col-md-4 mb-3" style="display: block;">
+                            <label for="efectivo">Efectivo con que abonará</label>
+                            <input type="text" class="form-control" id="efectivo" placeholder="" required maxlength="5">
+                            <div class="invalid-feedback" id="mensajeErrorEfectivo">
+                                Este campo es obligatorio
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="paymentDetails" style="display: none;">
+                        <div class="row">
+                            <label for="custom-state">Cuota</label>
+                            <select class="custom-select" id="custom-state" required>
+                                <option>1 cuota</option>
+                            </select>
+                        </div><br><br>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="cc-name">Nombre y Apellido</label>
+                                <input type="text" class="form-control" maxlength="200" id="cc-name" placeholder=""
+                                    onkeypress="return (event.charCode == 209 || event.charCode == 241 || event.charCode == 32 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+                                    required>
+                                <small class="text-muted">Como figura en la tarjeta</small>
+                                <div class="invalid-feedback" id="m-error-cc-name">
+                                    Este campo es obligatorio
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <label for="cc-number">Número de tarjeta</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required min="1"
+                                    maxlength="16">
+                                <div class="invalid-feedback" id="mensajeErrorCc-number">
+                                    Este campo es obligatorio
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="cc-expiration">Código de seguridad</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required min="1"
+                                    maxlength="3">
+                                <div class="invalid-feedback" id="mensajeErrorCc-cvv">
+                                    Este campo es obligatorio
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-expiration">Mes de vencimiento</label>
+                                <select class="custom-select d-block w-100" id="cc-expiration" name="mes-venc" required>
+                                    <option value="">Seleccione...</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <div class="invalid-feedback" id="m-error-mes-venc">
+                                    Este campo es obligatorio
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-expiration">Año de vencimiento</label>
+                                <select class="custom-select d-block w-100" id="cc-expiration" name="año-venc" required>
+                                    <option value="">Seleccione...</option>
+                                    <!-- for (var i = 1; i <= 64; i++) {
+                                        var optionValue = i.toString().padStart(2, '0');  Agregamos ceros a la izquierda si es necesario
+                                        var optionText = optionValue;  El texto de la opción es igual al valor en este caso 
+                                        var option = new Option(optionText, optionValue);
+                                        document.getElementById("cc-expiration").appendChild(option);
+                                    } -->
+                                    <!--<?php for ($i = 1; $i <= 64; $i++) { ?>
+                                        <option value="<?php echo str_pad($i, 2, '0', STR_PAD_LEFT); ?>">
+                                            <?php echo str_pad($i, 2, '0', STR_PAD_LEFT); ?>
+                                        </option>
+                                    <?php } ?>} -->
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                    <option>2031</option>
+                                    <option>2032</option>
+                                    <option>2033</option>
+                                    <option>2034</option>
+                                    <option>2035</option>
+                                    <option>2036</option>
+                                    <option>2037</option>
+                                    <option>2048</option>
+                                    <option>2049</option>
+                                    <option>2050</option>
+                                    <option>2051</option>
+                                    <option>2052</option>
+                                    <option>2053</option>
+                                    <option>2054</option>
+                                    <option>2056</option>
+                                    <option>2057</option>
+                                    <option>2058</option>
+                                    <option>2059</option>
+                                    <option>2060</option>
+                                    <option>2061</option>
+                                    <option>2062</option>
+                                </select>
+                                <div class="invalid-feedback" id="m-error-año-venc">
+                                    Este campo es obligatorio
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <hr class="mb-4">
+                            <h4 class="mb-3">¿Cuándo desea recibir su pedido?</h4>
+
+                            <div class="d-block my-3">
+
+
+                                <div class="custom-control custom-radio">
+                                    <input id="antesPosible" name="recepcionPedido" type="radio" checked
+                                        class="custom-control-input">
+
+                                    <label class="custom-control-label" for="antesPosible">Lo antes posible</label>
+                                </div>
+
+                                <div class="custom-control custom-radio">
+                                    <input id="programado" name="recepcionPedido" type="radio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="programado">Fecha programada</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div id="div-fecha-programada" style="display: none;">
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <input type='datetime-local' class="form-control" id="fechaHora" name="fechaHora" required />
+                                        <div class="invalid-feedback" id="error-mensaje-fecha">Por favor ingrese la fecha de entrega</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <hr class="mb-4">
+                    <button id="realizarPedido" class="btn btn-primary btn-lg btn-block" type="submit">Realizar
+                        pedido</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 DeliverEat!</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacidad</a></li>
+            <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
+            <li class="list-inline-item"><a href="#">Soporte</a></li>
+        </ul>
+    </footer>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap core JavaScript
+    ==================================================  Placed at the end of the document so the pages load faster -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS y JS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Datetimepicker CSS y JS -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+        rel="stylesheet">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+    <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+    </script>
+
+    <script>
+        function validarSoloNumeros(idCampo, idMensajeError) {
+            var campo = document.getElementById(idCampo);
+            var mensajeError = document.getElementById(idMensajeError);
+
+            campo.addEventListener("input", function () {
+                var valor = this.value;
+                if (!/^\d+$/.test(valor)) {
+                    mensajeError.innerHTML = "Ingrese solo números.";
+                    mensajeError.classList.add("d-block")
+                    campo.setCustomValidity("Ingrese solo números.");
+                } else if (valor.value = "") {
+                    mensajeError.classList.add("d-block")
+                    mensajeError.innerHTML = "Este campo es obligatorio";
+                    campo.setCustomValidity("Este campo es obligatorio");
+                }
+                else {
+                    mensajeError.classList.remove("d-block")
+                    mensajeError.innerHTML = "";
+                    campo.setCustomValidity("");
+                }
+            });
+        }
+        validarSoloNumeros("zip", "mensajeErrorZip")
+        validarSoloNumeros("cc-number", "mensajeErrorCc-number")
+        validarSoloNumeros("cc-cvv", "mensajeErrorCc-cvv");
+    </script>
+
+    <script>
+        var efectivoInput = document.getElementById("efectivo");
+        var mensajeErrorEfectivo = document.getElementById("mensajeErrorEfectivo");
+
+
+        efectivoInput.addEventListener("input", function () {
+            var valorEfectivo = this.value.trim(); // Elimina espacios en blanco
+            var esNumero = /^[0-9]+$/.test(valorEfectivo); // Verifica si es un número
+            var importeTotalNumerico = parseFloat(total.textContent.replace('$', ''));
+            var vuelto = document.getElementById("vuelto")
+
+            if (!esNumero || valorEfectivo < 0 || valorEfectivo > 50000) {
+                mensajeErrorEfectivo.classList.add("d-block")
+                efectivoInput.setCustomValidity("Ingrese un numero mayor a 0 y menor o igual a 50.000")
+                mensajeErrorEfectivo.innerHTML = "Ingrese un numero mayor a 0 y menor o igual a 50.000";
+                vuelto.textContent = '---';
+            } else if (efectivoInput.value == "") {
+                mensajeErrorEfectivo.classList.add("d-block")
+                efectivoInput.setCustomValidity("Este campo es obligatorio")
+                mensajeErrorEfectivo.innerHTML = "Este campo es obligatorio";
+                vuelto.textContent = '---';
+            } else if (efectivoInput.value.trim() < importeTotalNumerico) {
+                mensajeErrorEfectivo.classList.add("d-block")
+                efectivoInput.setCustomValidity("El valor ingresado es inferior al importe a abonar")
+                mensajeErrorEfectivo.innerHTML = "El valor ingresado es inferior al importe a abonar";
+                vuelto.textContent = '---';
+            } else {
+                mensajeErrorEfectivo.classList.remove("d-block")
+                efectivoInput.setCustomValidity("")
+                mensajeErrorEfectivo.innerHTML = "";
+
+                vueltoNumerico = efectivoInput.value.trim() - importeTotalNumerico;
+
+                if (vueltoNumerico == 0 || vueltoNumerico < 0){
+                vuelto.textContent = '$' + 0;
+                }
+                else{
+                    vuelto.textContent = '$' + vueltoNumerico;
+                }
+
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById("cc-number").addEventListener("input", function () {
+            // Obtén el valor del campo de entrada
+            const ccNumberInput = this;
+            const ccNumber = this.value.trim();
+
+            // Verifica si el valor ingresado es un número
+            if (!/^[0-9]*$/.test(ccNumber)) {
+                // Muestra un mensaje de error si no es un número
+                ccNumberInput.setCustomValidity("Por favor, ingresa solo números.");
+                document.getElementById("mensajeErrorCc-number").classList.add("d-block")
+                document.getElementById("mensajeErrorCc-number").innerHTML = "Por favor, ingresa solo números.";
+            } else if (ccNumber.length !== 16 || !ccNumber.startsWith("4")) {
+                // Verifica si el número de tarjeta no cumple con los criterios
+                ccNumberInput.setCustomValidity("El número de tarjeta no es VISA. Debe comenzar con 4 y tener 16 dígitos.");
+                document.getElementById("mensajeErrorCc-number").classList.add("d-block")
+                document.getElementById("mensajeErrorCc-number").innerHTML = "El número de tarjeta no es VISA. Debe comenzar con 4 y tener 16 dígitos.";
+            } else {
+                // El número de tarjeta es válido
+                document.getElementById("mensajeErrorCc-number").classList.remove("d-block")
+                document.getElementById("mensajeErrorCc-number").innerHTML = "";
+            }
+        });
+
+        document.getElementById("cc-cvv").addEventListener("input", function () {
+            // Obtén el valor del campo de entrada
+            const cvvInput = this;
+            const cvvValue = this.value.trim();
+
+            if (cvvValue.length < 3) {
+                // Verifica si el número de tarjeta no cumple con los criterios
+                cvvInput.setCustomValidity("El codigo de seguridad no puede ser inferior a tres digitos");
+                document.getElementById("mensajeErrorCc-cvv").classList.add("d-block")
+                document.getElementById("mensajeErrorCc-cvv").innerHTML = "El codigo de seguridad no puede ser inferior a tres digitos";
+            } else {
+                // El número de tarjeta es válido
+                cvvInput.setCustomValidity("");
+                document.getElementById("mensajeErrorCc-cvv").classList.remove("d-block")
+                document.getElementById("mensajeErrorCc-cvv").innerHTML = "";
+            }
+        });
+    </script>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                checkboxes.forEach(cb => {
+                    if (cb !== this) {
+                        cb.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carritoLista = document.getElementById('carrito-lista');
+            const cantidadProductosSpan = document.querySelector('.badge-pill');
+            const totalSpan = document.getElementById('total');
+
+            let cantidadProductos = 3;
+
+            // Agregar evento de clic a los botones de eliminación
+            const botonesEliminar = carritoLista.querySelectorAll('.eliminar');
+            botonesEliminar.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    const elemento = boton.closest('li');
+                    const importeElemento = elemento.querySelector('.importe');
+                    const importeNumerico = parseFloat(importeElemento.textContent.replace('$', '').trim());
+                    // Resta el importe del producto eliminado al total actual
+                    const totalNumericoActual = parseFloat(totalSpan.textContent.replace('$', '').trim());
+                    const nuevoTotalNumerico = totalNumericoActual - importeNumerico;
+
+                    // Actualizar el contenido del elemento "total" con el nuevo total
+                    if(nuevoTotalNumerico < 0){
+                        
+                        totalSpan.textContent = '$0';
+                    }
+                    else{
+                        totalSpan.textContent = `$${nuevoTotalNumerico}`;
+                    }
+
+                    elemento.remove();
+                    cantidadProductos--;
+                    cantidadProductosSpan.textContent = cantidadProductos;
+                    actualizarTotal(); 
+                    
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const formulario = document.querySelector('form');
+            const codigoDescuento = document.getElementById('codigoDescuento');
+            const total = document.getElementById('total');
+
+            formulario.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const codigoInput = formulario.querySelector('input[type="text"]');
+                const codigo = codigoInput.value.trim();
+
+                // Verifica si se ingresó un código de descuento
+                if (codigo !== '') {
+                    // Aplica el descuento
+                    const descuento = 500;
+                    codigoDescuento.textContent = `-$${descuento}`;
+                    if(parseFloat(total.textContent.replace('$', '')) - descuento < 0){
+                        
+                        total.textContent = "$0";
+                    }
+                    else{
+                        total.textContent = `$${parseFloat(total.textContent.replace('$', '')) - descuento}`;
+                    }
+                    
+                }
+
+                // Limpia el campo de entrada
+                codigoInput.value = '';
+            });
+        });
+    </script>
+
+    <!-- Mostrar y ocultar campo efectivo o tarjeta de credito/devito -->
+
+    <script>
+        // Obtener referencias a los elementos
+        const cashRadio = document.getElementById("cash");
+        const creditRadio = document.getElementById("credit");
+        const payWithDiv = document.getElementById("payWithDiv")
+        const paymentDetails = document.getElementById("paymentDetails")
+
+        const txtEfectivo = document.getElementById('efectivo');
+        const txtNombre = document.getElementById('cc-name');
+        const tarjeta = document.getElementById('cc-number');
+        const cvv = document.getElementById('cc-cvv');
+        const cbMes = document.getElementsByName('mes-venc')[0];
+        const cbAño = document.getElementsByName('año-venc')[0];
+
+        const mErorEfectivo = document.getElementById('mensajeErrorEfectivo');
+        const mErrorNombre = document.getElementById('m-error-cc-name');
+        const mErrorTarjeta = document.getElementById('mensajeErrorCc-number');
+        const mErrorCvv = document.getElementById('mensajeErrorCc-cvv');
+        const mErrorMes = document.getElementById('m-error-mes-venc');
+        const mErrorAño = document.getElementById('m-error-año-venc');
+
+
+        // Agregar un manejador de eventos para la casilla de verificación
+
+        creditRadio.addEventListener("change", function () {
+
+            if (creditRadio.checked) {
+                payWithDiv.style.display = "none"; // Oculta el div pago con efectivo
+                paymentDetails.style.display = "block"; // Mostrar el div pago con tarjeta
+            }
+        });
+        cashRadio.addEventListener("change", function () {
+            if (cashRadio.checked) {
+                paymentDetails.style.display = "none"; // Oculta el div pago con tarjeta
+                payWithDiv.style.display = "block"; // Mostrar el div pago con efectivo
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const realizarPedidoBtn = document.getElementById('realizarPedido');
+            const carritoLista = document.getElementById('carrito-lista');
+
+            //const mensajeError = document.createElement('div');
+            //mensajeError.classList.add('alert', 'alert-danger', 'mt-3', 'd-none');
+            //mensajeError.textContent = 'Agrega al menos un elemento al carrito antes de realizar el pedido.';
+            //carritoLista.parentElement.appendChild(mensajeError);
+
+
+            realizarPedidoBtn.addEventListener('click', function (event) {
+
+                const direcion = document.getElementById('address');
+                const provincia = document.getElementById('country');
+                const ciudad = document.getElementById('state');
+                const cpa = document.getElementById('zip');
+                const radioEfectivo = document.getElementById('cash');
+                const radioTarjeta = document.getElementById('credit');
+                const txtEfectivo = document.getElementById('efectivo');
+                const txtNombre = document.getElementById('cc-name');
+                const tarjeta = document.getElementById('cc-number');
+                const cvv = document.getElementById('cc-cvv');
+                const cbMes = document.getElementsByName('mes-venc')[0];
+                const cbAño = document.getElementsByName('año-venc')[0];
+                const radioInmediato = document.getElementById('antesPosible');
+                const radioProgramada = document.getElementById('programado');
+                const fechaHoraInput = document.getElementById("fechaHora");
+                const total = document.getElementById('total');
+                const totalNumerico = parseFloat(total.textContent.replace('$', ''));
+
+
+                const mes_venc = cbMes.options[cbMes.selectedIndex].text;
+                const año_venc = cbAño.options[cbAño.selectedIndex].text;
+                const fechaActual = new Date()
+                const añoActual = fechaActual.getFullYear();
+                const mesActual = (String(fechaActual.getMonth() + 1).padStart(2, '0'));
+                const añoMesActual = new Date(añoActual + "-" + mesActual);
+                const añoMesVenc = new Date(año_venc + "-" + mes_venc)
+
+                const fechaHoraSeleccionada = new Date(fechaHoraInput.value)
+                const fechaHoraMin = new Date();
+                fechaHoraMin.setHours(fechaHoraMin.getHours() + 1);
+                fechaHoraMin.setMinutes(fechaHoraMin.getMinutes() - 1);
+                const exprecionLogica = /^[0-9]+$/;
+                const fechaHoraMax = new Date();
+                fechaHoraMax.setDate(fechaHoraMax.getDate() + 7)
+
+
+                const elementosCarrito = carritoLista.querySelectorAll('li.list-group-item:not(.bg-light)');
+
+                if (elementosCarrito.length === 0 || totalNumerico === 0) {
+                    
+                    // Mostrar el mensaje de error
+                    Notiflix.Notify.failure("Agrega al menos un elemento al carrito antes de realizar el pedido", {timeout:5000});
+                    //mensajeError.textContent = 'Agrega al menos un elemento al carrito antes de realizar el pedido.';
+                    //mensajeError.classList.remove('d-none');
+                    event.preventDefault(); // Evitar que el formulario se envíe si no hay elementos en el carrito
+
+                } else if (direcion.value == "") {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (provincia.value === "") {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (ciudad.value === "") {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (cpa.value == "" || !exprecionLogica.test(cpa.value)) {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (radioEfectivo.checked && (!exprecionLogica.test(txtEfectivo.value) || txtEfectivo.value.trim() < 0 || txtEfectivo.value.trim() > 50000)) {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (radioTarjeta.checked && txtNombre.value == "") {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (radioTarjeta.checked && (tarjeta.value == "" || !exprecionLogica.test(tarjeta.value) || tarjeta.value.length !== 16 || !tarjeta.value.startsWith("4"))) {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (radioTarjeta.checked && (cvv.value == "" || !exprecionLogica.test(cvv.value) || cvv.value.length !== 3)) {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (radioTarjeta.checked && (cbMes.value === "" || cbAño.value === "" || añoMesVenc < añoMesActual)) {
+                    // Mostrar el mensaje de error
+                    Notiflix.Notify.failure("No ingreso una fecha de vencimineto o bien la tarjeta a expirado. ");
+                    //mensajeError.textContent = 'No ingreso una fecha de vencimineto de tarjeta de Devito/Credito o bien a expirado. Por favor controle dicho campo';
+                    //mensajeError.classList.remove('d-none');
+                    event.preventDefault();
+                } else if (radioProgramada.checked && (fechaHoraInput.value == "" || fechaHoraSeleccionada < fechaHoraMin || fechaHoraSeleccionada > fechaHoraMax || (fechaHoraSeleccionada.getHours() >= 0 && fechaHoraSeleccionada.getHours() < 8))) {
+                    Notiflix.Notify.failure("Algunos de los campos no fueron cargados corectamnte. Por favor revise los datos ingresados");
+                } else if (totalNumerico > parseFloat(txtEfectivo.value)) {
+                    // Mostrar el mensaje de error
+                    Notiflix.Notify.failure("El monto ingresado es inferior al monto total");
+                    //mensajeError.textContent = 'El monto ingresado es inferior al monto total';
+                    //mensajeError.classList.remove('d-none');
+                    event.preventDefault();
+                } else {
+                    // Ocultar el mensaje de error si hay elementos en el carrito
+                    //mensajeError.classList.add('d-none');
+
+                    // Mostrar un mensaje de éxito
+                    const mensajeExito = document.createElement('div');
+                    //mensajeExito.classList.add('alert', 'alert-success', 'mt-3');
+                    Notiflix.Notify.success("Pedido realizado correctamente.",{timeout:5000});
+                    //mensajeExito.textContent = 'Pedido realizado correctamente.';
+                    carritoLista.parentElement.appendChild(mensajeExito);
+
+                }
+            });
+        });
+    </script>
+
+    <script>
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Obtener referencias a los elementos
+
+        const fechaHoraInput = document.getElementById("fechaHora");
+        const errorMensaje = document.getElementById("error-mensaje-fecha");
+        const divFechaHora = document.getElementById("div-fecha-programada");
+        const cbProgramado = document.getElementById("programado");
+        const cbAntesPosible = document.getElementById("antesPosible");
+        const fechaHoraSeleccionada = new Date(fechaHoraInput.value);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Funciones
+
+        //Funcion para validar que no se este ingresando una fecha inferior o superior a la devida
+        function validarFechaYHora() {
+
+            // Obtener la fecha y hora seleccionada por el usuario
+            const fechaHoraSeleccionada = new Date(fechaHoraInput.value);
+
+            const fechaHoraMin = new Date();
+            fechaHoraMin.setHours(fechaHoraMin.getHours() + 1)
+            fechaHoraMin.setMinutes(fechaHoraMin.getMinutes() - 1)
+
+            const fechaHoraMax = new Date();
+            fechaHoraMax.setDate(fechaHoraMax.getDate() + 7)
+
+            console.log(fechaHoraSeleccionada.getHours())
+
+            if (fechaHoraSeleccionada < fechaHoraMin) {
+                errorMensaje.classList.add("d-block")
+                errorMensaje.innerHTML = "La fecha programada de entrega no puede inferior a 1 hora posteriores a la actual";
+                fechaHoraInput.setCustomValidity("La fecha programada de entrega no puede inferior a 1 hora posteriores a la actual")
+                fechaHoraInput.classList.add('is-invalid')
+
+            } else if (fechaHoraSeleccionada > fechaHoraMax) {
+                errorMensaje.classList.add("d-block")
+                errorMensaje.innerHTML = "La fecha programada de entrega no puede superar a 7 dias posteriores a la actual";
+                fechaHoraInput.setCustomValidity("La fecha programada de entrega no puede superar a 7 dias posteriores a la actual")
+                fechaHoraInput.classList.add('is-invalid')
+                
+            } else if (fechaHoraSeleccionada.getHours() >= 0 && fechaHoraSeleccionada.getHours() < 8) {
+                errorMensaje.classList.add("d-block")
+                errorMensaje.innerHTML = "Las horas de trabajo son de 08 a 23:59 Hs";
+                fechaHoraInput.setCustomValidity("Las horas de trabajo son de 08 a 23:59")
+                fechaHoraInput.classList.add('is-invalid')
+            } else {
+                errorMensaje.classList.remove("d-block")
+                errorMensaje.innerHTML = "";
+                fechaHoraInput.setCustomValidity("")
+                fechaHoraInput.classList.remove('is-invalid')
+            }
+        }
+
+        function asignarMinMaxFechas() {
+            const fechaMin = new Date()
+            const fechaMax = new Date()
+            fechaMin.setHours(fechaMin.getHours());
+            fechaMax.setDate(fechaMax.getDate() + 7);
+
+            console.log(fechaMin.toISOString())
+            console.log(fechaMax.toISOString())
+            fechaHoraInput.setAttribute("min", fechaMin.toISOString().slice(0, 16))
+            fechaHoraInput.setAttribute("max", fechaMax.toISOString().slice(0, 16))
+        }
+
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        // Eventos
+
+        //Asignar min y max al Detetime-local
+        //cbProgramado.addEventListener("change", asignarMinMaxFechas)
+
+        // Mostrar y ocultar campo de entrega programada
+        cbProgramado.addEventListener("change", function () {
+            if (cbProgramado.checked) {
+                fechaHoraInput.value = "";
+                fechaHoraInput.setCustomValidity("")
+                errorMensaje.innerHTML = "";
+                fechaHoraInput.classList.remove('is-invalid')
+                divFechaHora.style.display = "block";
+            }
+        });
+
+        cbAntesPosible.addEventListener("change", function () {
+            if (cbAntesPosible.checked) {
+                divFechaHora.style.display = "none"; // Oculta el div
+            }
+        });
+
+        // Validacion de fechas
+        fechaHoraInput.addEventListener("input", validarFechaYHora);
+
+    </script>
+
+
+
+</body>
+
+</html>

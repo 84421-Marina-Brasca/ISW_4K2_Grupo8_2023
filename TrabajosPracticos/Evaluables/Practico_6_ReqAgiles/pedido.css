@@ -1,0 +1,62 @@
+.container {
+    max-width: 960px;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.border-top-gray {
+    border-top-color: #adb5bd;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.lh-condensed {
+    line-height: 1.25;
+}
+
+.btn-xs {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.mb-3,
+.my-0 {
+    color: #006989
+}
+
+.principal {
+    color: #007090
+}
+
+.body {
+    margin: 0;
+    background-color: #EAEBED;
+}
+
+.container_img {
+    margin-top: 0px;
+    /* Puedes ajustar el valor según tus necesidades */
+    background-color: #01A7C2;
+    /* Color de fondo */
+    text-align: center;
+    /* Centramos el contenido horizontalmente */
+    padding: 10px;
+    /* Espaciado interno para el contenido dentro del contenedor */
+}
+
+.text-muted {
+    color: #A3BAC3
+}
+
+
+/* #img {
+    background-color: #01A7C2;
+} */
