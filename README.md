@@ -2,7 +2,7 @@
 ## Repositorio del grupo 8 de ISW
 
 ### Integrantes
-- 84421 - Brasca, Marina
+- 84421 - Brasca, Marina Constanza
 - 68247 - Martinez, Yesica
 - 58535 - Miszczuk, Solange 
 - 76822 - Niveyro, Lucas
