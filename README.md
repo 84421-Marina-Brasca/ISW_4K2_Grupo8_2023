@@ -58,8 +58,7 @@ ISW_4K2_Grupo8_2023
             │
             │
             ├───PresentacionesDeClases
-            │       └───TrabajoConceptualN<número>
-            │               ISW_PPT_<tema>.<ext> 
+            │       ISW_PPT_<tema>.<ext> 
             │
             │
             └───Resumenes
