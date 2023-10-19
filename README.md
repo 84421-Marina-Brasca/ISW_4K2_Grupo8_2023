@@ -41,7 +41,7 @@ ISW_4K2_Grupo8_2023
     │                │               ISW_TP_<numero>_Evaluabe.<ext> 
     │                │       
     │                │       
-    │                └───Evaluables
+    │                └───EjerciciosResueltos
     │                        └───TrabajoPracticoN<numero>
     │                                ISW_TP_<numero>_NoEvaluable.<ext> 
     │                       
