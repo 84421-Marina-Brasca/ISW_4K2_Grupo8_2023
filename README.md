@@ -41,7 +41,7 @@ ISW_4K2_Grupo8_2023
     │                │               ISW_TP_<numero>_Evaluabe.<ext> 
     │                │       
     │                │       
-    │                └───Evaluables
+    │                └───NoEvaluables
     │                        └───TrabajoPracticoN<numero>
     │                                ISW_TP_<numero>_NoEvaluable.<ext> 
     │                       
@@ -82,6 +82,7 @@ ISW_4K2_Grupo8_2023
 | Guía de ejercicios prácticos resueltos	| ISW_Guía_Ejercicios_Prácticos_Resueltos.pdf   | /Practico/Guías/ISW_Guía_Ejercicio s_Prácticos_Resueltos.pdf	|
 | Templates                                     | ISW_Template_\<número\>_parcial.docx            | /Templates/ISW_Template_\<número\>_parcial.docx		|
 | Template caso de prueba            	 	| ISW_Template_Caso_de_Prueba.\<ext\>     	    	| /Templates/ISW_Template_C aso_de_Prueba.\<ext\> 			|
+| Ejercicio Resuelto             	 	| ISW_EjercicioResuelto_\<temaEjercisio\>_\<alumno\>.\<ext\>     	    	| /Practico/EjerciciosResueltos/ISW_EjercicioResuelto_\<temaEjercisio\>_\<alumno\>.\<ext\> 			|
 
 
 ### Glosario
@@ -98,7 +99,9 @@ ISW_4K2_Grupo8_2023
 | TP      	        | Trabajo práctico.  	                                                                                        |
 | 2C		        | Segundo Cuatrimestre.                                                                           		|
 | TC	                | Trabajo conceptual.                                                                      			|
-| PPT	        	| Presentación Power Point.                                                                                     |           
+| PPT	        	| Presentación Power Point.                                                                                     | 
+| \<temaEjercisio\>    	| Nombre del tema del ejercicio resuelto (ej. UserStories)                                                      | 
+| \<alumno\>    	| Nombre del alumno                                       					                |
 
 	
 ### Base Line
