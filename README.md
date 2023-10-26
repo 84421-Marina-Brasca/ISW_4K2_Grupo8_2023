@@ -106,7 +106,7 @@ ISW_4K2_Grupo8_2023
 Se define como momento de creación de la línea base de este plan de gestión de configuración referente a la materia Ingeniería de Software los primeros días hábil posterior a las fechas de exámenesparciales, la misma contendrá todos los archivos existentes en la rama “Main” al momento de la creación. Se tomo esta decisión debido a que:
 - Durante la semana a dicha fecha el estudiante se encontrará ocupado preparándose en sus estudios.
 - Se dará este tiempo para que los alumnos puedan subir los ejercicios de practica que haya resulto antes del parcial.
-- Se aprovecharán los días hábiles para que los integrantes del equipo terminar o bien realizar los últimos cambios sobre para Trabajos prácticos evaluables que se hayan realizado durante la última semana.
-- Permitir al alumno ponerse al día con los cambios que le hallan faltado realizar en el repositorio. (Ejemplo: Trabajos prácticos, ejercicios que haya realizado, etc).
-- Facilitar la evaluación y comprensión, debido a que la definir la línea base posterior al parcial, se podrá evidenciar el progreso realzado antes y después de dicho periodo.
+- Se aprovecharán los días hábiles para que los integrantes del equipo terminen de realziar los últimos cambios sobre Trabajos prácticos evaluables que se hayan realizado durante la última semana.
+- Permitir al alumno ponerse al día con los cambios que le hayan faltado realizar en el repositorio. (Ejemplo: Trabajos prácticos, ejercicios que haya realizado, etc).
+- Facilitar la evaluación y comprensión, debido a que al definir la línea base posterior al parcial, se podrá evidenciar el progreso realzado antes y después de dicho periodo.
 
