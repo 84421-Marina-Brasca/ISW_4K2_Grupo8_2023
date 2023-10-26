@@ -15,24 +15,21 @@
 ISW_4K2_Grupo8_2023
 └───main
     ├───General
+    |       |   ISW_Programa_2C_2023.pdf
+    |       |
     │       ├───Bibliografia
-    │       │       ISW_<titulo del libro>_<autor>_<edicion>.pdf
-    │       │
+    │       │       ISW_Bibliografia_<título>
+    │       │      
     │       │
     │       ├───LinksClasesGrabadas
-    │       │
-    │       │
-    │       └───ProgramaDeLaAsignatura
-    │               ISW_Programa_2C_2023.pdf
+    │	    	    ISW_LinksClasesGrabadas_<año>.xlsx
     │       
     │       
     ├───Practico
-    │       ├───EjerciciosResueltos
-    │       │
-    │       │
     │       ├───Guias
     │       │       ISW_Guia_Ejercicios_Practicos_Resueltos.pdf
     │       │       ISW_Guia_TP_2023.pdf
+    |       |       ISW_Simulacro_Parcial<número>_<titulo>.pdf
     │       │
     │       │
     │       └───TrabajosPracticos
@@ -42,23 +39,23 @@ ISW_4K2_Grupo8_2023
     │                │       
     │                │       
     │                └───NoEvaluables
-    │                        └───TrabajoPracticoN<numero>
-    │                                ISW_TP_<numero>_NoEvaluable.<ext> 
+    │                        ISW_TP_<temaEjercicios>_<guía de referencia>_NoEvaluable_<alumno>.<ext>
     │                       
     │                       
     ├───Templates
-    │       ISW_Template_<numero>_parcial.docx
+    │       ISW_Template_parcial_<numero>.docx
+    |       ISW_Template_Caso_de_Prueba.<ext>
     │       
     │
     └───Teórico
             ├───TrabajosConceptuales
             │       └───TrabajoConceptualN<número>
-            │               ISW_Guía_TC_2022.pdf
+            │               ISW_Guía_TC_2023.pdf
             │               ISW_TC_<número>_<nombre>.<ext> 
             │
             │
             ├───PresentacionesDeClases
-            │       ISW_PPT_<tema>.<ext> 
+            │       ISW_PPT_<número>_<tema>.<ext> 
             │
             │
             └───Resumenes
@@ -70,19 +67,21 @@ ISW_4K2_Grupo8_2023
 
 | Nombre del ítem de configuración  		| Regla de nombrado                          	| Ubicación física              				|
 |-----------------------------------------------|-----------------------------------------------|---------------------------------------------------------------|
-| Programa de la materia            		| ISW_Programa_2C_2023.pdf               	| /General/ProgramaDeLaAsignatura/ISW_Programa_2C_2023.pdf	|
-| Bibliografía                           	| ISW_<título del libro>\_<autor\>_\<edición\>.pdf  | /General/Bibliografia/ISW_<título del libro>\_<autor\>_\<edición\>.pdf     |
-| Guía de trabajos conceptuales         	| ISW_Guía_TC_2023.pdf                          | /Teorico/TrabajosConceptuales/ISW_Guía_TC_2023.pdf            |
-| Resolución de trabajos conceptuales       	| ISW_TC_\<número\>_\<nombre\>.\<ext\>                 | /Teorico/TrabajosConceptuales/ISW_TC_\<número\>_\<nombre\>.\<ext\>   |
-| Presentaciones de clases        		| ISW_PPT_\<tema\>.\<ext\>                           | /Teorico/PresentacionesDeClases /UnidadN<numero>/ISW_PPT_\<tema\>.\<ext\>         |
-| Resúmenes                                	| ISW_Resúmen_\<número\>.\<ext\>               	| /Teorico/Resúmenes/ISW_R esúmen_\<número\>.\<ext\>         	|
-| Resolución de trabajos prácticos evaluables   | ISW_TP_\<número\>_Evaluabe.\<ext\>         	| /Practico/TrabajosPrácticos/Evaluables/TrabajoPracticoN<numero>/ISW_TP_\<número\>_Evaluabe.\<ext\>         |
-| Resolución de trabajos prácticos no evaluables        | ISW_TP_\<número\>_NoEvaluable.\<ext\>      | /Practico/TrabajosPrácticos/NoEvaluables/TrabajoPracticoN<numero>/ISW_TP\_\<número\>_No_Evaluable.\<ext\>    |
-| Guía de trabajos prácticos			| ISW_Guía_TP_2023.pdf                        	| /Practico/Guías/ISW_Guía_TP_2023.pdf  			|
-| Guía de ejercicios prácticos resueltos	| ISW_Guía_Ejercicios_Prácticos_Resueltos.pdf   | /Practico/Guías/ISW_Guía_Ejercicio s_Prácticos_Resueltos.pdf	|
-| Templates                                     | ISW_Template_\<número\>_parcial.docx            | /Templates/ISW_Template_\<número\>_parcial.docx		|
-| Template caso de prueba            	 	| ISW_Template_Caso_de_Prueba.\<ext\>     	    	| /Templates/ISW_Template_C aso_de_Prueba.\<ext\> 			|
-| Ejercicio Resuelto             	 	| ISW_EjercicioResuelto_\<temaEjercisio\>_\<alumno\>.\<ext\>     	    	| /Practico/EjerciciosResueltos/ISW_EjercicioResuelto_\<temaEjercisio\>_\<alumno\>.\<ext\> 			|
+| Programa de la materia            		| ISW_Programa_2C_2023.pdf               	| \ISW_4K2_Grupo8_2023\General	                                |
+| Links de clases grabadas de años anteriores 	| ISW_LinksClasesGrabadas_<año>.xlsx           	| \ISW_4K2_Grupo8_2023\General\LinksClasesGrabadas              |
+| Resolución de trabajos conceptuales       	| ISW_TC_\<número\>_\<nombre\>.\<ext\>          | \ISW_4K2_Grupo8_2023\Teorico\TrabajosConceptuales		|
+| Presentaciones de clases        		| ISW_PPT_\<número\>_\<tema\>.\<ext\>           | \ISW_4K2_Grupo8_2023\Teorico\PresentacionesDeClases	        |
+| Resúmenes                                	| ISW_Resúmen_\<número\>.\<ext\>               	| \ISW_4K2_Grupo8_2023\Teorico\Resumenes      	         	|
+| Resolución de trabajos prácticos evaluables   | ISW_TP_\<número\>_Evaluabe.\<ext\>         	| \ISW_4K2_Grupo8_2023\Practico\TrabajosPracticos\Evaluables\TrabajoPracticoN<numero>        |
+| Resolución de trabajos prácticos no evaluables | ISW_TP_<temaEjercicios>_\<guía de referencia\>_NoEvaluable_<alumno>. <ext>      | \ISW_4K2_Grupo8_2023\Practico\TrabajosPracticos\NoEvaluables |
+| Guía de trabajos prácticos			| ISW_Guía_TP_2023.pdf                        	| \ISW_4K2_Grupo8_2023\Practico\Guías  				|
+| Guía de ejercicios prácticos resueltos	| ISW_Guía_Ejercicios_Prácticos_Resueltos.pdf   | \ISW_4K2_Grupo8_2023\Practico\Guías				|
+| Guía de trabajos conceptuales         	| ISW_Guía_TC_2023.pdf                          | \ISW_4K2_Grupo8_2023\Teorico\TrabajosConceptuales             |
+| Bibliografía                           	| ISW_Bibliografia_<título>			| \ISW_4K2_Grupo8_2023\General\Bibliografia			|
+| Templates                                     | ISW_Template_parcial_\<número\>.docx          | \ISW_4K2_Grupo8_2023\Templates				|
+| Template caso de prueba            	 	| ISW_Template_Caso_de_Prueba.\<ext\>       	| \ISW_4K2_Grupo8_2023\Templates				|
+| Ejercicios simulacro de parcial   	 	| ISW_Simulacro_Parcial<número>_<titulo>.pdf   	| \ISW_4K2_Grupo8_2023\Practico\Guias				|
+
 
 
 ### Glosario
@@ -90,19 +89,24 @@ ISW_4K2_Grupo8_2023
 | Etiqueta		| Valor                          										| 
 |-----------------------|---------------------------------------------------------------------------------------------------------------|
 | <\<ext\>>		| Nombre de la extensión de un archivo identificado como ítem de configuración.    	        		| 
+| <\<guía de referencia\>>		| Nombre de la extensión de un archivo identificado como ítem de configuración.       		| 
 | <\<tema\>>      	| Nombre que hace referencia al contenido teórico abordado en dicha presentación.                               | 	        
 | <\<número\>>		| Nombre que hace referencia a número de parcial, número de resumen, número de template, número de trabajos conceptuales correspondientes a los documentos.     |
-| <<título del libro>>	| Nombre que corresponde al título del libro.                                             			|
-| <\<autor\>>		| Nombre que hace referencia al autor del libro.                                                                |              			
-| <<edición>>	        | Nombre o número asociado a la edición del libro.                                              		|
+| <\<título\>>	| Nombre que corresponde al título del libro.                                            	  			|
+| <\<temaEjercicios\>>	| Nombre del tema de los ejercicios que se han realizado (ej. UserStories)	                                |              			
+| <\<alumno\>>        	| Nombre del alumno                             				                 		|
 | ISW		        | Ingeniería de software    				                        				| 
 | TP      	        | Trabajo práctico.  	                                                                                        |
 | 2C		        | Segundo Cuatrimestre.                                                                           		|
 | TC	                | Trabajo conceptual.                                                                      			|
 | PPT	        	| Presentación Power Point.                                                                                     | 
-| \<temaEjercisio\>    	| Nombre del tema del ejercicio resuelto (ej. UserStories)                                                      | 
-| \<alumno\>    	| Nombre del alumno                                       					                |
 
 	
-### Base Line
-Se define como momento de creación de la línea base de este plan de gestión de configuración referente a la materia Ingeniería de Software el primer día hábil posterior a las fechas de exámenes parciales, la misma contendrá todos los archivos existentes en la rama “Main” al momento de la creación.
+### Gestión de la línea base
+Se define como momento de creación de la línea base de este plan de gestión de configuración referente a la materia Ingeniería de Software los primeros días hábil posterior a las fechas de exámenesparciales, la misma contendrá todos los archivos existentes en la rama “Main” al momento de la creación. Se tomo esta decisión debido a que:
+	- Durante la semana a dicha fecha el estudiante se encontrará ocupado preparándose en sus estudios.
+	- Se dará este tiempo para que los alumnos puedan subir los ejercicios de practica que haya resulto antes del parcial.
+	- Se aprovecharán los días hábiles para que los integrantes del equipo terminar o bien realizar los últimos cambios sobre para Trabajos prácticos evaluables que se hayan realizado durante la última semana.
+	- Permitir al alumno ponerse al día con los cambios que le hallan faltado realizar en el repositorio. (Ejemplo: Trabajos prácticos, ejercicios que haya realizado, etc).
+	- Facilitar la evaluación y comprensión, debido a que la definir la línea base posterior al parcial, se podrá evidenciar el progreso realzado antes y después de dicho periodo.
+
