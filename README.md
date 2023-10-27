@@ -15,7 +15,6 @@
 ISW_4K2_Grupo8_2023
 └───main
     ├───General
-    |       |   ISW_Programa_2C_2023.pdf
     |       |
     │       ├───Bibliografia
     │       │       ISW_Bibliografia_<título>
@@ -55,11 +54,8 @@ ISW_4K2_Grupo8_2023
             │
             │
             ├───PresentacionesDeClases
-            │       ISW_PPT_<número>_<tema>.<ext> 
-            │
-            │
-            └───Resumenes
-                    ISW_Resúmen_<número>.<ext> 
+                   ISW_PPT_<número>_<tema>.<ext> 
+            
 
 ```
 
@@ -71,7 +67,6 @@ ISW_4K2_Grupo8_2023
 | Links de clases grabadas de años anteriores 	| ISW_LinksClasesGrabadas_<año>.xlsx           	| \ISW_4K2_Grupo8_2023\General\LinksClasesGrabadas              |
 | Resolución de trabajos conceptuales       	| ISW_TC_\<número\>_\<nombre\>.\<ext\>          | \ISW_4K2_Grupo8_2023\Teorico\TrabajosConceptuales		|
 | Presentaciones de clases        		| ISW_PPT_\<número\>_\<tema\>.\<ext\>           | \ISW_4K2_Grupo8_2023\Teorico\PresentacionesDeClases	        |
-| Resúmenes                                	| ISW_Resúmen_\<número\>.\<ext\>               	| \ISW_4K2_Grupo8_2023\Teorico\Resumenes      	         	|
 | Resolución de trabajos prácticos evaluables   | ISW_TP_\<número\>_Evaluabe.\<ext\>         	| \ISW_4K2_Grupo8_2023\Practico\TrabajosPracticos\Evaluables\TrabajoPracticoN<numero>        |
 | Resolución de trabajos prácticos no evaluables | ISW_TP_<temaEjercicios>_\<guía de referencia\>_NoEvaluable_<alumno>. <ext>      | \ISW_4K2_Grupo8_2023\Practico\TrabajosPracticos\NoEvaluables |
 | Guía de trabajos prácticos			| ISW_Guía_TP_2023.pdf                        	| \ISW_4K2_Grupo8_2023\Practico\Guías  				|
